@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>ペット登録</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>ペット登録</h1>
+    </header>
+    <main>
+        <button th:onclick="|location.href='/petList'|">登録ペット一覧</button>
+        <button th:onclick="|location.href='/PetRegistration'|">新規登録</button>
+        <button th:onclick="|location.href='/'|">戻る</button>
+    </main>
+</body>
+</html>

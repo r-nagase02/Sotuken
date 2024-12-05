@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>新規ペット登録</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>ペット登録</h1>
+    </header>
+    <main>
+        <form method="post" action="/savePet">
+            <!-- 種類 -->
+            <label for="type">種類 (例: 犬, 猫, ハムスター):</label>
+            <input type="text" id="type" name="type" placeholder="例: 犬, 猫, ハムスター" required>
+            
+            <!-- 名前 -->
+            <label for="name">名前:</label>
+            <input type="text" id="name" name="name" placeholder="ペットの名前" required>
+            
+            <!-- 性別 -->
+            <label>性別:</label>
+            <div>
+                <input type="radio" id="male" name="gender" value="オス" required>
+                <label for="male">オス</label>
+                <input type="radio" id="female" name="gender" value="メス" required>
+                <label for="female">メス</label>
+            </div>
+            
+            <!-- 生年月日 -->
+            <label for="birthDate">生年月日:</label>
+            <input type="date" id="birthDate" name="birthDate" required>
+            
+            <label for="feed">エサ:</label>
+            <input type="text" id="feed" name="name" required>
+            
+            <label for="photograph">写真:</label>
+            <input type="text" id="photograph" name="name" required>
+            
+            <label for="remarks">備考:</label>
+            <input type="text" id="remarks" name="name">
+            <!-- 完了ボタン -->
+            <button th:onclick="|location.href='petCompletion'|">完了</button>
+        </form>
+        <button th:onclick="|location.href='/'|">戻る</button>
+    </main>
+</body>
+</html>
